@@ -1,10 +1,13 @@
 import React from 'react'
+import { useGlobalStates } from './utils/global.context'
 
 const Footer = () => {
+  const {state} = useGlobalStates()
+  const theme = state.theme
   return (
-    <footer>
-        <p>Powered by</p>
-        <img src="./img/DH.png" alt='DH-logo' />
+    <footer className={theme}>
+        <p>Powered by Thiago Cordon</p>                
+        <img src='./images/DH.png' alt="DH-logo"/>
     </footer>
   )
 }
